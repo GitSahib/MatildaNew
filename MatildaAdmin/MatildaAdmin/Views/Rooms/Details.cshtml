@@ -1,0 +1,51 @@
+﻿@model MVC5App.Models.Room
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Room</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RoomID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RoomID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MirrorUDID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MirrorUDID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RoomNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RoomNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hotel.HotelName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hotel.HotelName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
